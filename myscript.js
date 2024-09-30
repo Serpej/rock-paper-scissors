@@ -23,11 +23,9 @@ console.log("Hello World!");
  }
 
  getComputerChoice()
- getComputerChoice()
- getComputerChoice()
- getComputerChoice()
- getComputerChoice()
- getComputerChoice()
+
+ /* #Create a function that calls getComputerChoice() when we write either Rock Paper or Scissors in the console 
+    #*/
 
     
   
