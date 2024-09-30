@@ -24,8 +24,27 @@ console.log("Hello World!");
 
  getComputerChoice()
 
- /* #Create a function that calls getComputerChoice() when we write either Rock Paper or Scissors in the console 
-    #*/
+ function getHumanChoice() {
+   let choice = window.prompt("Rock, Paper or Scissors?");
+
+   if (choice.toLowerCase() === "rock") {
+    return console.log("Rock");
+
+   } else if (choice.toLowerCase() === "paper") {
+    return console.log("Paper");
+   
+   } else if (choice.toLowerCase() === "scissors") {
+    return console.log("Scissors");
+   } 
+ }
+
+ getHumanChoice()
+
+ /* #Create a function that calls getComputerChoice() when we write either Rock Paper or Scissors in the console.
+
+    #Create a function that keeps score by increasing numbers and associates them with computer and player.
+
+    #Create a function that checks "who wins" with conditionals, prints the score and an appropriate message.*/
 
     
   
