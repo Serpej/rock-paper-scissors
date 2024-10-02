@@ -27,7 +27,7 @@ console.log("Hello World!");
    let choice = window.prompt("Rock, Paper or Scissors?");
 
    if (choice === null) {
-      return console.log("Come on, let's play!");
+      return console.log("Aw, I wanted to play with you...");
 
    } else if (choice.toLowerCase() === "paper") {
     return "You chose Paper.";
@@ -51,23 +51,25 @@ console.log("Hello World!");
 /*  #Create a function with the human choice and the computer choice as arguments, plays a single round and increases the winners score by one */
 
 function playRound (choice1, choice2) {
-   
-/*    if (choice === null){
-      console.log("Come on, just one more round!"), getHumanChoice(); */
+
+   let showScore = ` Human score:${humanScore} Computer score:${computerScore}`
 
    if (choice1 === "Paper" && choice2 === "Rock") {
-      ++humanScore, console.log(`You win this round! Human score:{$humanScore} Computer score:{$computerScore}`);
+      ++humanScore, console.log(`You win this round!` + showScore);
 
    } else if (choice1 === "Rock" && choice2 === "Scissors") {
-      ++humanScore, console.log(`You win this round! Human score:{$humanScore} Computer score:{$computerScore}`);
+      ++humanScore, console.log(`You win this round!` + showScore);
    
    } else if (choice1 === "Scissors" && choice2 === "Paper") {
-      ++humanScore, console.log(`You win this round! Human score:{$humanScore} Computer score:{$computerScore}`);
+      ++humanScore, console.log(`You win this round!` + showScore);
 
    } else if (choice1 === choice2) {
-      console.log(`It's a tie. Human score:${humanScore} Computer score:${computerScore}`);
+      console.log(`It's a tie.` + showScore);
+   
+   }else if (choice1 === null) { 
+      
 
-   } else { ++computerScore, console.log(`Computer wins this round. Human score:${humanScore} Computer score:${computerScore}` );}
+   } else { ++computerScore, console.log(`Computer wins this round.` + showScore);}
 }
 
 playRound(getHumanChoice(), getComputerChoice())
