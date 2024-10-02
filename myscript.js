@@ -12,17 +12,16 @@ console.log("Hello World!");
     const choice = Math.random();
     
     if (choice <= 0.33) {
-        return console.log("You chose Rock.");
+        return console.log("The computer chose Rock.");
 
     } else if (choice >= 0.66) {
-        return console.log("You chose Scissors.");
+        return console.log("The computer chose Scissors.");
 
     } else {
-       return console.log("You chose Paper.");
+       return console.log("The computer chose Paper.");
     }
  }
 
- getComputerChoice()
 
   function getHumanChoice() {
    let choice = window.prompt("Rock, Paper or Scissors?");
@@ -31,17 +30,15 @@ console.log("Hello World!");
       return console.log("Come on, let's play!");
 
    } else if (choice.toLowerCase() === "paper") {
-    return "Paper";
+    return "You chose Paper.";
    
    } else if (choice.toLowerCase() === "scissors") {
-    return console.log("Scissors");
+    return console.log("You chose Scissors.");
    
    } else if (choice.toLowerCase() === "rock") {
-      return console.log("Rock");
+      return console.log("You chose Rock.");
    }
  }
-
- getHumanChoice()
 
 
 
