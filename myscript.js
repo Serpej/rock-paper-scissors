@@ -42,31 +42,31 @@ function playRound (choice1, choice2) {
    
    /* Human wins */
    if (choice1 === "Paper" && choice2 === "Rock") {
-      ++humanScore, console.log(`You win this round! The computer chose Rock.` + showScore);
+      console.log(`Nice! You win this round! The computer chose Rock.`), console.log(`Human score:${++humanScore} Computer score:${computerScore}`);
 
    } else if (choice1 === "Rock" && choice2 === "Scissors") {
-      ++humanScore, console.log(`You win this round! The computer chose Scissors.` + showScore);
+      console.log(`Nice! You win this round! The computer chose Scissors.`), console.log(`Human score:${++humanScore} Computer score:${computerScore}`);
    
    } else if (choice1 === "Scissors" && choice2 === "Paper") {
-      ++humanScore, console.log(`You win this round! The computer chose Paper.` + showScore);
+      console.log(`Nice! You win this round! The computer chose Paper.`), console.log(`Human score:${++humanScore} Computer score:${computerScore}`);
 
    
    
    /* Computer Wins */
 
    } else if (choice1 === "Rock" && choice2 === "Paper") {
-      ++computerScore, console.log(`Ouf! The computer chose Paper and wins this round.` + showScore);
+       console.log(`Ouf! The computer chose Paper and wins this round.`), console.log(`Human score:${humanScore} Computer score:${++computerScore}`);
 
    } else if (choice1 === "Scissors" && choice2 === "Rock") {
-      ++computerScore, console.log(`Ouf! The computer chose Rock and wins this round.` + showScore);
+      console.log(`Ouf! The computer chose Rock and wins this round.`), console.log(`Human score:${humanScore} Computer score:${++computerScore}`);
 
    } else if (choice1 === "Paper" && choice2 === "Scissors") {
-      ++computerScore, console.log(`Ouf! The computer chose Scissors and wins this round.` + showScore);
+      console.log(`Ouf! The computer chose Scissors and wins this round.`), console.log(`Human score:${humanScore} Computer score:${++computerScore}`);
 
    /* Its a tie */
    
    } else if (choice1 === choice2) {
-      console.log(`The computer also chose that. It's a tie.` + showScore);}
+      console.log(`The computer also chose that. It's a tie.`), console.log(`Human score:${humanScore} Computer score:${computerScore}`);}
       
 }
 
