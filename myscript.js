@@ -8,33 +8,27 @@ let Scissors = "Scissors";
   function getHumanChoice() {
    let choice = window.prompt("Rock, Paper or Scissors?");
 
-   if (choice === null) {
-      return console.log("Aw, I wanted to play with you...");
-   
-   } else if (choice.toLowerCase() === "scissors") {
-    return Scissors, console.log("You chose Scissors.");
+   if (choice.toLowerCase() === "scissors") {
+    return "Scissors"/*, console.log("You chose Scissors.") */;
    
    } else if (choice.toLowerCase() === "rock") {
-      return Rock, console.log("You chose Rock.");
+      return "Rock"/*, console.log("You chose Rock.") */;
       
    } else if (choice.toLowerCase() === "paper") {
-      return Paper, console.log("You chose Paper.");}
+      return "Paper"/* console.log("You chose Paper.") */;}
    }
 
    /* Computers choice */
  function getComputerChoice() {
     
    const choice = Math.random();
-  if (getHumanChoice()=== null) {
-     return;
-  
-  } else if (choice <= 0.33) {
-       return Rock, console.log("The computer chose Rock.");
+   if (choice <= 0.33) {
+       return "Rock"/*  console.log("The computer chose Rock.") */;
 
    } else if (choice >= 0.66) {
-       return Scissors, console.log("The computer chose Scissors.");
+       return "Scissors"/* , console.log("The computer chose Scissors.") */;
 
-   } else {return Paper, console.log("The computer chose Paper.");}
+   } else {return "Paper"/* , console.log("The computer chose Paper.") */;}
   }
 
  let humanScore = 0
@@ -46,23 +40,34 @@ function playRound (choice1, choice2) {
    let showScore = ` Human score:${humanScore} Computer score:${computerScore}`;
    let anything = "Paper" || "Rock" || "Scissor";
    
-
+   /* Human wins */
    if (choice1 === "Paper" && choice2 === "Rock") {
-      ++humanScore, console.log(`You win this round!` + showScore);
+      ++humanScore, console.log(`You win this round! The computer chose Rock.` + showScore);
 
    } else if (choice1 === "Rock" && choice2 === "Scissors") {
-      ++humanScore, console.log(`You win this round!` + showScore);
+      ++humanScore, console.log(`You win this round! The computer chose Scissors.` + showScore);
    
    } else if (choice1 === "Scissors" && choice2 === "Paper") {
-      ++humanScore, console.log(`You win this round!` + showScore);
+      ++humanScore, console.log(`You win this round! The computer chose Paper.` + showScore);
 
-   } else if (choice1 != anything) { 
-      console.log(`Too bad.`);
+   
+   
+   /* Computer Wins */
+
+   } else if (choice1 === "Rock" && choice2 === "Paper") {
+      ++computerScore, console.log(`Ouf! The computer chose Paper and wins this round.` + showScore);
+
+   } else if (choice1 === "Scissors" && choice2 === "Rock") {
+      ++computerScore, console.log(`Ouf! The computer chose Rock and wins this round.` + showScore);
+
+   } else if (choice1 === "Paper" && choice2 === "Scissors") {
+      ++computerScore, console.log(`Ouf! The computer chose Scissors and wins this round.` + showScore);
+
+   /* Its a tie */
    
    } else if (choice1 === choice2) {
-      console.log(`It's a tie.` + showScore);
+      console.log(`The computer also chose that. It's a tie.` + showScore);}
       
-   } else { ++computerScore, console.log(`Computer wins this round.` + showScore);}
 }
 
 playRound(getHumanChoice(), getComputerChoice())
