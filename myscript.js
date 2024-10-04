@@ -34,7 +34,7 @@ let Scissors = "Scissors";
  let humanScore = 0
  let computerScore = 0
 
-/* Activates the game */
+/* Activates one round */
 function playRound (choice1, choice2) {
 
    let showScore = ` Human score:${humanScore} Computer score:${computerScore}`;
@@ -51,7 +51,6 @@ function playRound (choice1, choice2) {
       console.log(`Nice! You win this round! The computer chose Paper.`), console.log(`Human score:${++humanScore} Computer score:${computerScore}`);
 
    
-   
    /* Computer Wins */
 
    } else if (choice1 === "Rock" && choice2 === "Paper") {
@@ -66,23 +65,55 @@ function playRound (choice1, choice2) {
    /* Its a tie */
    
    } else if (choice1 === choice2) {
-      console.log(`The computer also chose that. It's a tie.`), console.log(`Human score:${humanScore} Computer score:${computerScore}`);}
+      console.log(`The computer also chose that. It's a tie.`), console.log(`Human score:${humanScore} Computer score:${computerScore}`);
+   
+   } else if (choice1 != anything) {
+      console.log("Sorry, I think you spelled the word wrong. Try again!");}
       
 }
 
-playRound(getHumanChoice(), getComputerChoice())
+/* playRound(getHumanChoice(), getComputerChoice()) */
 
-/* if getHumanChoice equals Paper and getComputerChoice equals Rock, increase humanScore by one and print "You won this round!"
-   if getHumanChoice equals Rock and getComputerChoice equals Scissors, increase humanScore by one and print "You won this round!"
-   if getHumanChoice equals Scissors and getComputerChoice equals Paper, increase humanScore by one and print "You won this round!"
+/* #Create a function called playGame that calls playRound 5 times.*/
+
+function playGame (round) { /* 1st round */
+
+   playRound(getHumanChoice(), getComputerChoice()); /* 1st round */
    
-   if getHumanChoice equals getComputerChoice, return "It's a tie"
+   playRound(getHumanChoice(), getComputerChoice()); /* 2nd round */
+
+   playRound(getHumanChoice(), getComputerChoice()); /* 3rd round */
+
+   playRound(getHumanChoice(), getComputerChoice()); /* 4th round */
+
+  /*  playRound(getHumanChoice(), getComputerChoice()); /* 5th round */
+  
+
+   if (humanScore > computerScore ) {
+      console.log(`Congratulations, you win the game Human!`), console.log(`Human score:${humanScore} Computer score:${computerScore}`), restart();
    
-   otherwise, increase getComputerChoice by one and print "The computer won this round!*/
+   } else if (humanScore < computerScore) {
+      console.log(`You sadly lost against the computer.`), console.log(`Human score:${humanScore} Computer score:${computerScore}`), restart();
+   
+   } else {console.log(`Seems like it's a tie, do you want to play again?`), restart()}
+
+function restart() {
+let restart = window.prompt(`Play again?, yes or no`);
+      
+   if (restart.toLowerCase === "yes") {playGame(playRound(getHumanChoice(), getComputerChoice()))
+   
+   } else {console.log(`Launching missiles...`)}
+   }
+}
+
+playGame(playRound(getHumanChoice(), getComputerChoice()))
 
 
 
-   /*  #Create a function that checks "who wins" with conditionals, prints the score and an appropriate message. */
+
+/* #Make the function keep track of the scores in between the rounds. */
+/* #After 5 rounds are played, the function declares a winner. */
+
 
     
   
