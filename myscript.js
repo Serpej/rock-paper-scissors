@@ -1,34 +1,35 @@
 
-let Paper = "Paper";
-let Rock = "Rock";
-let Scissors = "Scissors";
+let quit = null;
 
 
-/* Human Choice */
+/* Human's Choice */
   function getHumanChoice() {
-   let choice = window.prompt("Rock, Paper or Scissors?");
+   let choice = window.prompt(`Feeling lucky punk?`, `Rock, Paper or Scissors`);
 
+   /* All other choices */
+   
    if (choice.toLowerCase() === "scissors") {
-    return "Scissors"/*, console.log("You chose Scissors.") */;
+     return "Scissors";
    
    } else if (choice.toLowerCase() === "rock") {
-      return "Rock"/*, console.log("You chose Rock.") */;
+      return "Rock";
       
    } else if (choice.toLowerCase() === "paper") {
-      return "Paper"/* console.log("You chose Paper.") */;}
+      return "Paper";
    }
+}
 
-   /* Computers choice */
+   /* Computer's choice */
  function getComputerChoice() {
     
    const choice = Math.random();
    if (choice <= 0.33) {
-       return "Rock"/*  console.log("The computer chose Rock.") */;
+       return "Rock";
 
    } else if (choice >= 0.66) {
-       return "Scissors"/* , console.log("The computer chose Scissors.") */;
+       return "Scissors";
 
-   } else {return "Paper"/* , console.log("The computer chose Paper.") */;}
+   } else {return "Paper";}
   }
 
  let humanScore = 0
@@ -37,10 +38,8 @@ let Scissors = "Scissors";
 /* Activates one round */
 function playRound (choice1, choice2) {
 
-   let showScore = ` Human score:${humanScore} Computer score:${computerScore}`;
-   let anything = "Paper" || "Rock" || "Scissor";
-   
-   /* Human wins */
+    
+   /* Human wins round */
    if (choice1 === "Paper" && choice2 === "Rock") {
       console.log(`Nice! You win this round! The computer chose Rock.`), console.log(`Human score:${++humanScore} Computer score:${computerScore}`);
 
@@ -51,7 +50,7 @@ function playRound (choice1, choice2) {
       console.log(`Nice! You win this round! The computer chose Paper.`), console.log(`Human score:${++humanScore} Computer score:${computerScore}`);
 
    
-   /* Computer Wins */
+   /* Computer wins one round*/
 
    } else if (choice1 === "Rock" && choice2 === "Paper") {
        console.log(`Ouf! The computer chose Paper and wins this round.`), console.log(`Human score:${humanScore} Computer score:${++computerScore}`);
@@ -67,26 +66,24 @@ function playRound (choice1, choice2) {
    } else if (choice1 === choice2) {
       console.log(`The computer also chose that. It's a tie.`), console.log(`Human score:${humanScore} Computer score:${computerScore}`);
    
-   } else if (choice1 != anything) {
-      console.log("Sorry, I think you spelled the word wrong. Try again!");}
-      
+   } else if (choice1 == null || choice1 == ''){
+      return;
+
+   } else if (choice1 == undefined) {
+      console.log(`Sorry, I think you spelled the word wrong. Try again!`);
+   }
 }
 
-/* playRound(getHumanChoice(), getComputerChoice()) */
-
-/* #Create a function called playGame that calls playRound 5 times.*/
 
 function playGame (round) { /* 1st round */
 
-   playRound(getHumanChoice(), getComputerChoice()); /* 1st round */
+   playRound(getHumanChoice(), getComputerChoice()); /* 2st round */
    
-   playRound(getHumanChoice(), getComputerChoice()); /* 2nd round */
+   playRound(getHumanChoice(), getComputerChoice()); /* 3nd round */
 
-   playRound(getHumanChoice(), getComputerChoice()); /* 3rd round */
+   playRound(getHumanChoice(), getComputerChoice()); /* 4rd round */
 
-   playRound(getHumanChoice(), getComputerChoice()); /* 4th round */
-
-  /*  playRound(getHumanChoice(), getComputerChoice()); /* 5th round */
+   playRound(getHumanChoice(), getComputerChoice()); /* 5th round */
   
 
    if (humanScore > computerScore ) {
@@ -96,23 +93,22 @@ function playGame (round) { /* 1st round */
       console.log(`You sadly lost against the computer.`), console.log(`Human score:${humanScore} Computer score:${computerScore}`), restart();
    
    } else {console.log(`Seems like it's a tie, do you want to play again?`), restart()}
+}
 
 function restart() {
 let restart = window.prompt(`Play again?, yes or no`);
       
-   if (restart.toLowerCase === "yes") {playGame(playRound(getHumanChoice(), getComputerChoice()))
+   if (restart === null || restart === '') {
+      return quit;
    
-   } else {console.log(`Launching missiles...`)}
-   }
+   } else if (restart.toLowerCase() === "yes") {playGame(playRound(getHumanChoice(), getComputerChoice()));
+   
+   } else {console.log(`Suit yourself!`)}
+
 }
 
 playGame(playRound(getHumanChoice(), getComputerChoice()))
 
-
-
-
-/* #Make the function keep track of the scores in between the rounds. */
-/* #After 5 rounds are played, the function declares a winner. */
 
 
     
