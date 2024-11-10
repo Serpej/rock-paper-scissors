@@ -1,0 +1,50 @@
+.central {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background-color:grey;
+    height: 100%;
+}
+
+.startGame {
+    margin: 5em;
+}
+
+.bigS {
+    height: 3em;
+    width: 5em;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 3em 3em 3em;
+    font-weight: bold;
+    border: solid black 2px;
+}
+
+.bigB {
+    height: 3em;
+    width: 7em;
+    font-size:x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0em 0em 1.5em 0em;
+    font-weight: bold;
+    border: solid black 2px;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+}
+
+.outputText {
+    text-align: center;
+}
+
+.makeChoice {
+    margin: 5em 0 3em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.border {
+    border: solid red 2px;
+}
