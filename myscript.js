@@ -28,9 +28,7 @@ const theScore = document.createElement("h1");
 const outputDiv = document.createElement("div");
 outputDiv.classList.add("outputText");
 
-body.appendChild(outputDiv);
-outputDiv.appendChild(output);
-outputDiv.appendChild(theScore);
+
 
     
 function choiceButtons() {
@@ -99,6 +97,11 @@ function showScore() {
 
 
 function playRound(event) {
+
+   body.appendChild(outputDiv);
+   outputDiv.appendChild(output);
+   outputDiv.appendChild(theScore);
+
    let HumanChoice = getHumanChoice (event);
    let ComputerChoice = getComputerChoice();
 
@@ -155,6 +158,7 @@ function reset() {
    theScore.textContent= "";
    humanScore = 0;
    computerScore = 0;
+   body.removeChild(outputDiv);
 };
 
 const restartDiv = document.createElement("div");
