@@ -1,9 +1,8 @@
 .central {
     display: flex;
-    align-items: stretch;
     justify-content: center;
+    align-items: stretch;
     background-color:grey;
-    height: 100%;
 }
 
 .startGame {
@@ -11,13 +10,15 @@
 }
 
 .bigS {
-    height: 3em;
-    width: 5em;
-    font-size: large;
+    height: 4em;
+    width: 6em;
+    font-size: x-large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0 3em 3em 3em;
     font-weight: bold;
     border: solid black 2px;
+    background-color: gold;
+    border-radius: 4px;
 }
 
 .bigB {
@@ -28,6 +29,8 @@
     margin: 0em 0em 1.5em 0em;
     font-weight: bold;
     border: solid black 2px;
+    background-color: gold;
+    border-radius: 4px;
 }
 
 .intro {
@@ -37,12 +40,19 @@
 
 .outputText {
     text-align: center;
+    border: solid black 2px;
+    border-radius: 4px;
+    background: palegoldenrod;
 }
 
 .makeChoice {
     margin: 5em 0 3em 0;
     display: flex;
     justify-content: center;
+    border: solid black 2px;
+    border-radius: 4px;
+    background: rgb(235, 57, 86);
+
 }
 
 .border {
