@@ -154,7 +154,7 @@ function reset() {
    body.appendChild(outputDiv);
    body.removeChild(restartDiv);
    
-   underscored.textContent ="Time to choose:";
+   underscored.textContent ="First to 5 points. Time to choose:";
    output.textContent = "";
    theScore.textContent= "";
    humanScore = 0;
