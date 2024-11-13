@@ -17,9 +17,15 @@
     margin: 0 3em 3em 3em;
     font-weight: bold;
     border: solid black 2px;
-    background-color: #C26C3D;
+    background-color: rgb(194, 108, 61);
     border-radius: 4px;
 }
+
+.bigS:hover, .bigB:hover {
+    scale: 1.1;
+    background-color: rgb(179, 77, 22);;
+}
+
 
 .bigB {
     height: 3em;
@@ -47,14 +53,10 @@
 
 .makeChoice {
     margin: 5em 0 3em 0;
+    padding: 0 16px 0 16px;
     display: flex;
     justify-content: center;
     border: solid black 2px;
     border-radius: 4px;
     background: #D49775;
-
-}
-
-.ins {
-    margin: 0 16px 0 16px;
 }
