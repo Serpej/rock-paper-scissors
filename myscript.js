@@ -9,8 +9,7 @@ startDiv.classList.add("intro");
 const startGame = document.querySelector(".startGame");
 
 const makeChoice = document.createElement("h1");
-const underscored = document.createElement("ins");
-underscored.classList.add("ins");
+makeChoice.classList.add("makeChoice");
    
 const Rock = document.createElement("button");
 const Paper = document.createElement("button");
@@ -37,11 +36,11 @@ function choiceButtons() {
    startDiv.appendChild(Paper);
    startDiv.appendChild(Scissors);
 
-   underscored.textContent ="First to 5 points. Time to choose:";
-   makeChoice.classList.add("makeChoice");
+   makeChoice.textContent ="First to 5 points.  Time to choose:";
+   
 
    body.insertBefore(makeChoice, startDiv);
-   makeChoice.appendChild(underscored);
+
   
 
    body.removeChild(startGame);
@@ -78,11 +77,11 @@ function getComputerChoice() {
    
 function showScore() {
    if (humanScore === 5) {
-      underscored.textContent=`Congratulations! You win the game!`;
+      makeChoice.textContent=`Congratulations! You win the game!`;
       theScore.textContent =`Human score:${humanScore} Computer score:${computerScore}`;
       
    } else if (computerScore === 5) {
-      underscored.textContent=`You sadly lost against the computer.`;
+      makeChoice.textContent=`You sadly lost against the computer.`;
       theScore.textContent =`Human score:${humanScore} Computer score:${computerScore}`;
    }
    
@@ -154,7 +153,7 @@ function reset() {
    body.appendChild(outputDiv);
    body.removeChild(restartDiv);
    
-   underscored.textContent ="First to 5 points. Time to choose:";
+   makeChoice.textContent ="First to 5 points. Time to choose:";
    output.textContent = "";
    theScore.textContent= "";
    humanScore = 0;
