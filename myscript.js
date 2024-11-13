@@ -10,6 +10,7 @@ const startGame = document.querySelector(".startGame");
 
 const makeChoice = document.createElement("h1");
 const underscored = document.createElement("ins");
+underscored.classList.add("ins");
    
 const Rock = document.createElement("button");
 const Paper = document.createElement("button");
