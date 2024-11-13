@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    background-color:grey;
+    background-color:#3D93C2
 }
 
 .startGame {
@@ -17,7 +17,7 @@
     margin: 0 3em 3em 3em;
     font-weight: bold;
     border: solid black 2px;
-    background-color: gold;
+    background-color: #C26C3D;
     border-radius: 4px;
 }
 
@@ -29,7 +29,7 @@
     margin: 0em 0em 1.5em 0em;
     font-weight: bold;
     border: solid black 2px;
-    background-color: gold;
+    background-color: #C26C3D;
     border-radius: 4px;
 }
 
@@ -42,7 +42,7 @@
     text-align: center;
     border: solid black 2px;
     border-radius: 4px;
-    background: palegoldenrod;
+    background: #D49775;
 }
 
 .makeChoice {
@@ -51,10 +51,10 @@
     justify-content: center;
     border: solid black 2px;
     border-radius: 4px;
-    background: rgb(235, 57, 86);
+    background: #D49775;
 
 }
 
-.border {
-    border: solid red 2px;
+.ins {
+    margin: 0 16px 0 16px;
 }
