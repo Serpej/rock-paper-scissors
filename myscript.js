@@ -37,7 +37,7 @@ function choiceButtons() {
    startDiv.appendChild(Paper);
    startDiv.appendChild(Scissors);
 
-   underscored.textContent ="Time to choose:";
+   underscored.textContent ="First to 5 points. Time to choose:";
    makeChoice.classList.add("makeChoice");
 
    body.insertBefore(makeChoice, startDiv);
